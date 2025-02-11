@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lundi Studio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="Favicon/Favicon.png" type="image/x-icon">
+</head>
+<body style="overflow-y: hidden;">
+    <!-- Loading GIF with Overlay -->
+    <div class="loading-video-container" id="loading-video-container">
+        <img id="loadingGif" src="LoadingPage/2.1.gif" alt="Loading GIF" onclick="hideVideo(event)">
+        <div id="overlay" class="overlay" onclick="hideVideo(event)"></div> <!-- Overlay to catch click -->
+    </div>
+
+    <h1>LUNDI STUDIO, <a href="information.html" class="information">information,</a> <a href="contact.html" class="contact">contact</a></h1>
+
+    <div class="gallery-container">
+        <div class="image-container">
+            <img src="Images/1.png" alt="Gallery Image"> <!-- Default image -->
+        </div>
+        <h2 class="image-caption">In Conversation, printed publication</h2> <!-- Default caption -->
+    </div>
+</body>
+</html>

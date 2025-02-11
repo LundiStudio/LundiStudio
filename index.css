@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align content to the top */
+}
+
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 1.1em;
+    position: absolute; /* Keep it fixed at the top */
+    top: 0; /* Align it to the top */
+    width: 100%;
+    /* user-select: none; */
+    
+}
+
+h2 {
+    font-family: ABCDiatype;
+    font-size: clamp(1.8em, 5vw, 3.4em);
+    text-align: center;
+    color: rgb(24, 124, 255);
+    position: absolute;
+    width: 100vw;
+    bottom: -16.3%;
+    user-select: none;
+    line-height: 1.2;
+}
+
+
+h3 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+}
+
+.close-button {
+    position: fixed;
+    top: 1.4em;
+    right: 2.2em;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.close-button:hover {
+    animation: jiggle 0.4s infinite;
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+p {
+    font-family: ABCDiatype;
+    font-size: clamp(1.8em, 5vw, 3.4em);
+    font-weight: bold;
+    text-align: left !important;
+    color: rgb(255, 255, 255);
+    margin-top: 0em;
+    margin-left: 0.5em;
+    margin-right: 0.5em; /* Equal right margin */
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+@font-face {
+    font-family: ABCDiatype;
+    src: url(Typefaces/ABCDiatypeRoundedVariableEdu-Regular.woff);
+}
+
+
+
+/* Image Gallery */
+
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    position: absolute;
+    top: 50%; /* Position it in the middle vertically */
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center properly */
+    width: 85vw; /* Control the width of the gallery */
+    height: 80vh; /* Control the height of the gallery */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+}
+
+.image-container img {
+    width: 100%; /* Make the images smaller */
+    height: 100%;
+    max-width: 68.5vw;
+    max-height: 61vh; /* Ensure the image doesn't stretch too much vertically */
+    object-fit: contain; /* Keep the image's aspect ratio intact */
+    user-select: none; /* Prevents text/image selection */
+    pointer-events: none; /* Prevents drag behavior */
+    transition: none; /* No transition on the image */
+}
+
+
+
+.image-caption {
+    opacity: 0; /* Start with the caption invisible */
+    transition: opacity 0.35s cubic-bezier(0.42, 0, 0.58, 1); /* Symmetric smooth easing */
+}
+
+
+/* Mobile styles (target screens smaller than 768px width) */
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 100vw; /* Adjust the maximum width on mobile */
+        max-height: 51vh; /* Adjust the height on mobile */
+    }
+}
+
+
+/* Caption Fixed for Mobile */
+
+@media (max-width: 768px) {
+    .image-caption {
+        padding-bottom: calc(3.4rem + env(safe-area-inset-bottom));
+        max-width: 90vw; /* Limit text width for better readability */
+    }
+}
+
+
+/* Information Button */
+
+.information {
+    cursor: pointer; /* Makes it clickable */
+}
+
+.information:hover {
+    text-transform: uppercase; /* Changes text to uppercase on hover */
+}
+
+
+/* Contact Button */
+
+.contact {
+    cursor: pointer; /* Makes it clickable */
+}
+
+.contact:hover {
+    text-transform: uppercase; /* Changes text to uppercase on hover */
+}
+
+
+
+
+
+
+/* <a> TAGS  */
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    cursor: pointer; /* Ensures links always show as clickable */
+    display: inline-block; /* Ensures transform works properly */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+a:hover {
+    transform: scale(1.063);
+}
+
+
+/* Exclude h1 from hover effect */
+
+h1 a {
+    transition: none !important; /* Disable scaling on h1 links */
+}
+
+
+
+
+
+
+
+
+
+/*  Sparkle Effect On Information and Contact page relative to paragraph <p> tag */
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+    }
+    75% {
+        opacity: 0.9;
+        text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+
+
+
+
+
+/* <!-- GIF ANIMATION BEFORE ENTERING INDEX.HTML --> */
+
+/* Style for the loading GIF container */
+.loading-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; /* Make sure the GIF is on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(254, 252, 254);
+    visibility: visible;
+}
+
+/* GIF styling to cover the screen */
+#loadingGif {
+    width: 56.5vw;
+    height: auto;
+    margin-top: -7vh; /* Adjust this value as needed */
+}
+
+/* Overlay to catch click events */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    z-index: 10000; /* Ensures it's above the GIF */
+    cursor: pointer;
+}
+
+/* Mobile-specific styles: Adjust the GIF width on smaller screens */
+@media (max-width: 768px) {
+    #loadingGif {
+        width: 85vw; /* Increase GIF width for mobile devices */
+    }
+}
+
+
+/* Slightly increase scale 2.2.gif & 2.3.gif */
+
+/* Apply scaling only if the src contains 2.2.gif */
+#loadingGif[src*="2.2.gif"] {
+    transform: scale(1.018);
+}
+
+/* Apply scaling only if the src contains 2.3.gif */
+#loadingGif[src*="2.3.gif"] {
+    transform: scale(1.16);
+}
+
+
+
+
+
