@@ -172,8 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // List of available GIFs
 const gifOptions = [
     "LoadingPage/2.1.gif",
-    "LoadingPage/2.2.gif",
-    "LoadingPage/2.3.gif" // Added third GIF
+    "LoadingPage/2.1.gif",
+    "LoadingPage/2.1.gif" // Added third GIF
 ];
 
 // Randomly select a GIF

@@ -274,14 +274,10 @@ h1 a {
 /* Slightly increase scale 2.2.gif & 2.3.gif */
 
 /* Apply scaling only if the src contains 2.2.gif */
-#loadingGif[src*="2.2.gif"] {
-    transform: scale(1.018);
+#loadingGif[src*="2.1.gif"] {
+    transform: scale(1.118);
 }
 
-/* Apply scaling only if the src contains 2.3.gif */
-#loadingGif[src*="2.3.gif"] {
-    transform: scale(1.16);
-}
 
 
 
