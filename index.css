@@ -266,7 +266,7 @@ h1 a {
 /* Mobile-specific styles: Adjust the GIF width on smaller screens */
 @media (max-width: 768px) {
     #loadingGif {
-        width: 85vw; /* Increase GIF width for mobile devices */
+        width: 95vw; /* Increase GIF width for mobile devices */
     }
 }
 
