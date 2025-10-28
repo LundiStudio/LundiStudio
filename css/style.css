@@ -1,0 +1,44 @@
+@font-face {
+    font-family: ABCDiatype;
+    src: url(/typefaces/ABCDiatypeRoundedVariableEdu-Regular.woff) format("woff");
+}
+
+*{
+    background-color: rgb(255, 253, 238);
+}
+
+.loadingText{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: transparent;
+}
+
+.loadingText p {
+    font-family: 'ABCDiatype', sans-serif;
+    animation: blink 1.5s infinite ease-in-out;
+    font-size: 1em;
+}
+
+.symbol{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.symbol img{
+    height: 5vh;
+    width: auto;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
